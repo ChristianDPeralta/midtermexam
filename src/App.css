@@ -1,38 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("https://i.pinimg.com/originals/52/1a/0c/521a0cdc1c91ea6fb266dc1d494d342d.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+
+.CalcContainer {
+  border: 5px solid #333;
+  border-radius: 15px;
+  width: 320px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.DispContainer {
+  padding: 15px;
+  border-bottom: 3px solid #333;
+  background-color: rgb(126, 96, 191);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+}
+
+.Display {
+  font-size: 2.5em;
+  text-align: right;
+  color: #ffffff;
+  min-height: 60px;
+  padding: 0 10px;
+  letter-spacing: 1px;
+}
+
+.ButtonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.ButtonsContainer > button {
+  flex: 0 1 23%;
+  margin: 1%;
+  font-size: 1.5em;
+  padding: 15px 0;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(228, 177, 240);
   color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s, box-shadow 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.ButtonsContainer > button:hover {
+  background-color: rgb(67, 56, 120);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ButtonsContainer > button:active {
+  transform: scale(0.98);
+}
+
+.op-button {
+  background-color: rgb(126, 96, 191);
+}
+
+.op-button:hover {
+  background-color: rgb(100, 76, 160);
+}
+
+.clear-button,
+.equals-button {
+  background-color: rgb(255, 99, 71);
+}
+
+.clear-button:hover,
+.equals-button:hover {
+  background-color: rgb(220, 70, 50);
+}
+
+.PeraltaButton {
+  width: 100%;
+  font-size: 1.5em;
+  padding: 15px 0;
+  margin-top: 10px;
+  background-color: rgb(240, 128, 128);
+  color: white;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.PeraltaButton:hover {
+  background-color: rgb(200, 80, 80);
+}
+
+.PeraltaButton:active {
+  transform: scale(0.98);
 }
